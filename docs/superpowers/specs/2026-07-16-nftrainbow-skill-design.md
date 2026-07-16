@@ -1,7 +1,7 @@
 # NFTRainbow Skill 设计规格
 
 **日期：** 2026-07-16  
-**状态：** 待用户审阅  
+**状态：** 已批准（实现计划见 `docs/superpowers/plans/2026-07-16-nftrainbow-skill.md`）  
 **仓库根目录：** 即 skill 根目录（`nft-rainbow-skills/`）
 
 ## 1. 目标与边界
