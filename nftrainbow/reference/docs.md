@@ -24,6 +24,15 @@
 
 **纠正：** 账户方案文档中的 Anyweb 已不可用；用户侧钱包请使用**晒啦**。
 
+## Rainbow Activity（含 POAP）
+
+| 主题 | URL |
+|------|-----|
+| Rainbow Activity / POAP | https://docs.nftrainbow.xyz/tutorials/guides/poap |
+| 源码（gitbook） | https://github.com/nft-rainbow/rainbow-doc/blob/main/tutorials/guides/poap.md |
+
+详见 [activity.md](activity.md)。控制台：https://console.nftrainbow.cn
+
 ## 其他产品
 
 | 主题 | URL |

@@ -7,5 +7,5 @@
 5. **钱包：** Anyweb 不可用 → 晒啦。
 6. **Swagger：** 禁止默认整读 `openapi/swagger-2.0.json`；先 `reference/api.md`。
 7. **Pin 过期：** 默认信本地 pin；用户反馈接口不符时核对线上 `doc.json`，提示更新 pin 与 `api.md` 同步日期/sha256。
-8. **Activity：** 见 `activity.md`，勿臆造。
+8. **Activity / POAP：** 控制台创建 + 领取页 + 晒啦；合约须先代付；勿编造 Activity Open API。见 `activity.md`。
 9. **Web3 Services：** 本 skill 只谈购买/配置，不谈 RPC/SCAN 调用。
