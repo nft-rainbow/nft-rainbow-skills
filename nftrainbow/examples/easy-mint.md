@@ -1,5 +1,6 @@
 # Easy Mint 示例
 
+先完成鉴权前置（创建 App → login → Bearer），见 [../reference/auth.md](../reference/auth.md)。
 先设置好 `NFTRAINBOW_*` 环境变量（见 `env.md`）。
 
 ## 1. Login

@@ -38,7 +38,10 @@
 | 主题 | URL |
 |------|-----|
 | Web3 Services | https://docs.nftrainbow.xyz/products/web3-services |
-| Open API 相关（Authentication / Error codes 等） | 以 `llms.txt` / `sitemap.md` 为准，勿猜测路径 |
+| Open API Authentication | https://docs.nftrainbow.xyz/about-the-apis/authentication |
+| Open API Login | https://docs.nftrainbow.xyz/api-reference/open-api/login |
+
+其余 Open API 页面可通过 `llms.txt` / `sitemap.md` 定位，勿猜测路径。
 
 ## 社区
 

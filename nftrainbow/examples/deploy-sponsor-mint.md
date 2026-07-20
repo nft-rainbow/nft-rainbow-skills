@@ -1,5 +1,6 @@
 # Deploy → Sponsor → Custom Mint
 
+先完成鉴权前置（创建 App → login → Bearer），见 [../reference/auth.md](../reference/auth.md)。
 环境变量同 `env.md`。先获取 `TOKEN`（同 `easy-mint.md`）。
 
 ## 1. Deploy

@@ -48,7 +48,7 @@ Skill 在 `nftrainbow/` 目录下，**文件夹名与 frontmatter `name: nftrain
 ├── README.md
 └── nftrainbow/
     ├── SKILL.md              # 触发条件、决策树、硬性规则
-    ├── reference/            # 文档索引、API、工作流、产品边界
+    ├── reference/            # 文档索引、鉴权前置、API、工作流、产品边界
     ├── examples/             # env + Easy Mint + 部署代付铸造
     └── openapi/
         └── swagger-2.0.json  # pin 的官方 Swagger 2.0（~188KB）
@@ -56,8 +56,9 @@ Skill 在 `nftrainbow/` 目录下，**文件夹名与 frontmatter `name: nftrain
 
 集成时建议：
 
-1. 设置 `NFTRAINBOW_APP_ID` / `NFTRAINBOW_APP_SECRET`（见 [`nftrainbow/examples/env.md`](nftrainbow/examples/env.md)）
-2. `POST /v1/login` 取 JWT，再调 `/v1/*`
+0. 先在 [Rainbow 控制台](https://console.nftrainbow.cn) 创建 App 并取得 `app_id` / `app_secret`
+1. 先完成鉴权前置（见 [`nftrainbow/reference/auth.md`](nftrainbow/reference/auth.md)），再调 `/v1/*`
+2. 设置 `NFTRAINBOW_APP_ID` / `NFTRAINBOW_APP_SECRET`（见 [`nftrainbow/examples/env.md`](nftrainbow/examples/env.md)）
 3. 链参数使用 `conflux` / `conflux_test`
 4. 铸造前确保合约代付或自动代付就绪
 5. 轮询任务 `status`：`0` pending / `1` success / `2` failed

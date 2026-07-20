@@ -1,11 +1,13 @@
 # 工作流
 
-凭证见 `examples/env.md`。接口细节见 `reference/api.md`；字段以 pin swagger 为准。
+开始前先完成鉴权前置（创建 App → `app_id`/`app_secret` → login → Bearer），见 [auth.md](auth.md)。
+凭证环境变量见 `examples/env.md`。接口细节见 `reference/api.md`；字段以 pin swagger 为准。
 
 ## 1. Easy Mint（最快试铸）
 
 适用：无自有合约、快速验证。
 
+0. 完成鉴权前置（见 [auth.md](auth.md)）。
 1. `POST /v1/login` 取 JWT。
 2. 任选：
    - `POST /v1/mints/easy/files`（multipart：file + name/description/chain/mint_to_address）
@@ -17,6 +19,7 @@
 
 ## 2. 自有合约：Deploy → Sponsor → Mint
 
+0. 完成鉴权前置（见 [auth.md](auth.md)）。
 1. Login。
 2. `POST /v1/contracts` 部署 ERC721/ERC1155（`chain`/`name`/`symbol`/`type`）。
 3. 等待合约 `status=1`；记录 `address`。
