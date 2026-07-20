@@ -24,6 +24,7 @@ description: >
 ## 决策树
 
 ```
+只说“想铸造 NFT”？       → 先执行下方「铸造入口」
 文档 / 概念 / 链接？     → reference/docs.md
 要写集成代码？           → api.md + workflows.md + examples/
 Web3 Services？          → web3-services.md（禁止展开 RPC/SCAN 调用）
@@ -41,10 +42,14 @@ Conflux 链基础概念？     → 可建议 conflux-docs；Rainbow 代付步骤
 - 铸造前确保代付/自动代付就绪
 - Pin 默认可信；接口不符时核对线上 swagger 并提示更新 pin 与 `api.md` 同步信息
 
-## 推荐路径
+## 铸造入口
 
-- 最快试铸 → Easy Mint（[examples/easy-mint.md](examples/easy-mint.md)）
-- 自有合约 → Deploy → Sponsor → Mint（[examples/deploy-sponsor-mint.md](examples/deploy-sponsor-mint.md)）
+用户只表达“想铸造 NFT”时，先说明两种路径，再只问一个分流问题：“你想最快试铸一枚，还是部署自己的 NFT 合约/系列？”
+
+- 最快试铸 → Easy Mint：平台处理文件、metadata 和合约（[examples/easy-mint.md](examples/easy-mint.md)）
+- 自有合约/系列 → Deploy → Sponsor → Mint：自选 ERC721/ERC1155，管理 metadata、转让规则和代付（[examples/deploy-sponsor-mint.md](examples/deploy-sponsor-mint.md)）
+
+用户选择后再收集该路径的必需信息：两条路径都需要链、接收地址和 NFT 内容；自有合约还需要 ERC721/ERC1155、名称、symbol、转让规则和代付方式。信息齐全前不提交链上任务。
 
 ## 禁止
 
