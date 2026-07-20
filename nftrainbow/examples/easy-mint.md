@@ -1,6 +1,6 @@
 # Easy Mint 示例
 
-先完成 KYC（见 [../reference/kyc.md](../reference/kyc.md)），再完成鉴权前置并取得 `TOKEN`（含环境变量，见 [../reference/auth.md](../reference/auth.md)）。
+先完成鉴权前置并取得 `TOKEN`（含环境变量），见 [../reference/auth.md](../reference/auth.md)。
 
 ## 1. Easy mint by URL
 
