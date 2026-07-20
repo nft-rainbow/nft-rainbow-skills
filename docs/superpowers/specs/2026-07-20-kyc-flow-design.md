@@ -70,11 +70,11 @@ Agent 在指导 mint / Open API 集成 / Rainbow Activity 前，必须先完成�
 
 ## Acceptance Criteria
 
-- [ ] 存在 `nftrainbow/reference/kyc.md`，含：控制台 URL、顶部提示文案、更新路径、无查询 API、`40105`
-- [ ] `SKILL.md` 强制集成/Activity 相关路径先读 KYC
-- [ ] `auth.md` / `activity.md` / workflows / 两个 mint 示例有 KYC 引用或等价前置
-- [ ] 其余文件仅短引用，无互相矛盾的长文副本
-- [ ] 仓库内无臆造的 KYC Open API path
+- [x] 存在 `nftrainbow/reference/kyc.md`，含：控制台 URL、顶部提示文案、更新路径、无查询 API、`40105`
+- [x] `SKILL.md` 强制集成/Activity 相关路径先读 KYC
+- [x] `auth.md` / `activity.md` / workflows / 两个 mint 示例有 KYC 引用或等价前置
+- [x] 其余文件仅短引用，无互相矛盾的长文副本
+- [x] 仓库内无臆造的 KYC Open API path
 
 ## Verify
 

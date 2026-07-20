@@ -1,5 +1,7 @@
 # 鉴权前置（Open API）
 
+先完成 KYC（实名认证），见 [kyc.md](kyc.md)。
+
 问 mint / 写 `/v1/*` 集成时，**必须先完成**本页；再进入 Easy Mint 或 Deploy → Sponsor → Mint。
 
 ## 1. 创建 App 并获取凭证
@@ -49,5 +51,6 @@ TOKEN=$(curl -fsS -X POST "$NFTRAINBOW_BASE_URL/v1/login" \
 
 ## Agent 行为
 
+- 用户未声明「KYC/实名已通过」→ 先指向 [kyc.md](kyc.md)，再进入本页 1–3
 - 用户问「怎么 mint / 怎么调 API」→ 先复述本节 1–3，再给铸造步骤
 - 用户已声明持有 `app_id`/`app_secret` 或已 login → 可跳过「创建 App」，仍须提醒 Bearer JWT

@@ -16,7 +16,7 @@
 创建活动前完成：
 
 1. 注册并登录 [NFTRainbow 控制台](https://console.nftrainbow.cn)
-2. 右上角提交实名信息，等待审核通过
+2. 完成 KYC（实名认证），见 [kyc.md](kyc.md)
 3. 创建项目并部署合约
 4. 为合约设置代付（需先充值）。单个 NFT 存储约 `0.6–0.7 CFX`，按发行量预留（例如 100 个约 `70 CFX`）。详见：https://docs.nftrainbow.xyz/tutorials/guides/kong-zhi-tai-he-yue-dai-fu-she-zhi
 
