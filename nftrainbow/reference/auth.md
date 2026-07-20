@@ -12,17 +12,22 @@
 
 ## 2. Login 换 JWT
 
-`POST https://api.nftrainbow.cn/v1/login`
+先按 §1 设置好 `NFTRAINBOW_BASE_URL` / `NFTRAINBOW_APP_ID` / `NFTRAINBOW_APP_SECRET`，再调用：
+
+`POST {NFTRAINBOW_BASE_URL}/v1/login`（默认 Base 为 `https://api.nftrainbow.cn`）
 
 Body：`{"app_id":"...","app_secret":"..."}`
 
-从响应取 `token`（可能在 `data.token` 或顶层 `token`）。
-
 ```bash
-curl -fsS -X POST "https://api.nftrainbow.cn/v1/login" \
+TOKEN=$(curl -fsS -X POST "$NFTRAINBOW_BASE_URL/v1/login" \
   -H 'Content-Type: application/json' \
-  -d '{"app_id":"YOUR_APP_ID","app_secret":"YOUR_APP_SECRET"}'
+  -d "{\"app_id\":\"$NFTRAINBOW_APP_ID\",\"app_secret\":\"$NFTRAINBOW_APP_SECRET\"}" \
+  | python3 -c 'import sys,json; r=json.load(sys.stdin); print((r.get("data") or r)["token"])')
 ```
+
+从响应取 `token`（可能在 `data.token` 或顶层 `token`），写入 shell 变量 `TOKEN`。
+
+后续示例默认已设置好 `TOKEN` 与 `NFTRAINBOW_BASE_URL`（以及其余 `NFTRAINBOW_*`）。
 
 ## 3. 调用时携带 Bearer
 
