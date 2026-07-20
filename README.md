@@ -10,6 +10,7 @@
 
 - **文档导航** — 指向 [docs.nftrainbow.xyz](https://docs.nftrainbow.xyz/) 已验证页面（支持 `.md` / `?ask=`）
 - **Open API 集成** — 鉴权、部署合约、代付、元数据、铸造 / 转账 / 销毁主链路
+- **KYC 前置** — 集成 / mint / Activity 前先走实名认证（见 [`nftrainbow/reference/kyc.md`](nftrainbow/reference/kyc.md)）
 - **渐进披露** — 日常用精简 `reference/api.md`；字段细节再局部查 pin 的 swagger
 - **示例脚本** — curl + 环境变量的 Easy Mint 与 Deploy → Sponsor → Mint 闭环
 - **Rainbow Activity / POAP** — 控制台发行、领取页与晒啦领取流程（非 Open API）
@@ -48,7 +49,7 @@ Skill 在 `nftrainbow/` 目录下，**文件夹名与 frontmatter `name: nftrain
 ├── README.md
 └── nftrainbow/
     ├── SKILL.md              # 触发条件、决策树、硬性规则
-    ├── reference/            # 文档索引、鉴权前置、API、工作流、产品边界
+    ├── reference/            # 文档索引、KYC/鉴权前置、API、工作流、产品边界
     ├── examples/             # env + Easy Mint + 部署代付铸造
     └── openapi/
         └── swagger-2.0.json  # pin 的官方 Swagger 2.0（~188KB）
@@ -56,12 +57,13 @@ Skill 在 `nftrainbow/` 目录下，**文件夹名与 frontmatter `name: nftrain
 
 集成时建议：
 
-1. 先在 [Rainbow 控制台](https://console.nftrainbow.cn) 创建 App 并取得 `app_id` / `app_secret`
-2. 先完成鉴权前置（见 [`nftrainbow/reference/auth.md`](nftrainbow/reference/auth.md)），再调 `/v1/*`
-3. 设置 `NFTRAINBOW_APP_ID` / `NFTRAINBOW_APP_SECRET`（见 [`nftrainbow/examples/env.md`](nftrainbow/examples/env.md)）
-4. 链参数使用 `conflux` / `conflux_test`
-5. 铸造前确保合约代付或自动代付就绪
-6. 轮询任务 `status`：`0` pending / `1` success / `2` failed
+1. 先完成 KYC（见 [`nftrainbow/reference/kyc.md`](nftrainbow/reference/kyc.md)）
+2. 再在 [Rainbow 控制台](https://console.nftrainbow.cn) 创建 App 并取得 `app_id` / `app_secret`
+3. 完成鉴权前置（见 [`nftrainbow/reference/auth.md`](nftrainbow/reference/auth.md)），再调 `/v1/*`
+4. 设置 `NFTRAINBOW_APP_ID` / `NFTRAINBOW_APP_SECRET`（见 [`nftrainbow/examples/env.md`](nftrainbow/examples/env.md)）
+5. 链参数使用 `conflux` / `conflux_test`
+6. 铸造前确保合约代付或自动代付就绪
+7. 轮询任务 `status`：`0` pending / `1` success / `2` failed
 
 > [!IMPORTANT]
 > 不要把真实 `app_secret` 写入仓库。字段级请求体以 [`nftrainbow/openapi/swagger-2.0.json`](nftrainbow/openapi/swagger-2.0.json) 为准，禁止默认整读该文件。
