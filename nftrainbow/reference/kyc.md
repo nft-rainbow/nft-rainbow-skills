@@ -1,6 +1,6 @@
 # KYC 前置（实名认证）
 
-问 mint / 写 `/v1/*` 集成 / 发 Rainbow Activity 时，**必须先完成**本页；再进入鉴权（`auth.md`）或 Activity 创建流程。
+问 mint / 写 `/v1/*` 集成 / **创建或发行** Rainbow Activity（项目方）时，**必须先完成**本页；再进入鉴权（`auth.md`）或 Activity 创建流程。用户领取 Activity/POAP **不**要求项目方 KYC。
 
 ## 1. 为何需要
 
@@ -42,7 +42,7 @@
 
 ## Agent 行为
 
-- 用户问「怎么 mint / 调 API / 发 Activity」→ 先复述本节 2–3（或指向本页），再进 `auth.md` 或 `activity.md`
+- 用户问「怎么 mint / 调 API / 创建或发行 Activity（项目方）」→ **未声明**「KYC/实名已通过」时先复述上文第 2–3 节（或指向本页），再进 `auth.md` 或 `activity.md`
 - 用户已声明「KYC/实名已通过」→ 可跳过展开；可一句提醒用控制台顶部提示自检
 - 出现 `KYC required` / `40105` → 引导控制台完成审核；勿编造查询 API
 - 问「怎么查 KYC 状态」→ 只能看控制台顶部提示，无 Open API
