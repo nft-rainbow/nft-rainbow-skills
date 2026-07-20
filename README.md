@@ -57,13 +57,11 @@ Skill 在 `nftrainbow/` 目录下，**文件夹名与 frontmatter `name: nftrain
 
 集成时建议：
 
-1. 先完成 KYC（见 [`nftrainbow/reference/kyc.md`](nftrainbow/reference/kyc.md)）
-2. 再在 [Rainbow 控制台](https://console.nftrainbow.cn) 创建 App 并取得 `app_id` / `app_secret`
-3. 完成鉴权前置（见 [`nftrainbow/reference/auth.md`](nftrainbow/reference/auth.md)），再调 `/v1/*`
-4. 设置 `NFTRAINBOW_APP_ID` / `NFTRAINBOW_APP_SECRET`（见 [`nftrainbow/examples/env.md`](nftrainbow/examples/env.md)）
-5. 链参数使用 `conflux` / `conflux_test`
-6. 铸造前确保合约代付或自动代付就绪
-7. 轮询任务 `status`：`0` pending / `1` success / `2` failed
+1. 先完成鉴权前置（见 [`nftrainbow/reference/auth.md`](nftrainbow/reference/auth.md)，内含 KYC），再调 `/v1/*`
+2. 设置 `NFTRAINBOW_APP_ID` / `NFTRAINBOW_APP_SECRET`（见 [`nftrainbow/examples/env.md`](nftrainbow/examples/env.md)）
+3. 链参数使用 `conflux` / `conflux_test`
+4. 铸造前确保合约代付或自动代付就绪
+5. 轮询任务 `status`：`0` pending / `1` success / `2` failed
 
 > [!IMPORTANT]
 > 不要把真实 `app_secret` 写入仓库。字段级请求体以 [`nftrainbow/openapi/swagger-2.0.json`](nftrainbow/openapi/swagger-2.0.json) 为准，禁止默认整读该文件。
