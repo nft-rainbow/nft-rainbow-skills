@@ -3,9 +3,11 @@ name: nftrainbow
 description: >
   NFTRainbow（NFT 彩虹桥）官方文档与 Open API 集成助手。覆盖铸造工具文档导航、
   合约部署/代付/元数据/铸造/转账/销毁、Web3 Services 购买与配置、以及 Rainbow Activity/POAP
-  控制台发行与领取流程，以及 KYC/实名认证与错误码 40105（KYC required）。
+  控制台发行与领取流程；亦覆盖 NFTRainbow 控制台 KYC/实名认证，以及 Open API 错误码
+  40105（KYC required）。
   在用户提及 NFTRainbow、Rainbow API、NFT 铸造、合约代付、元数据、api.nftrainbow.cn、
-  docs.nftrainbow.xyz、Web3 Services、Activity、POAP、KYC、实名、40105 或 KYC required 时使用。
+  docs.nftrainbow.xyz、Web3 Services、Activity、POAP，或在 NFTRainbow / Rainbow 语境下
+  提及 KYC、实名、40105、KYC required 时使用。
 ---
 
 # NFTRainbow
