@@ -3,8 +3,11 @@ name: nftrainbow
 description: >
   NFTRainbow（NFT 彩虹桥）官方文档与 Open API 集成助手。覆盖铸造工具文档导航、
   合约部署/代付/元数据/铸造/转账/销毁、Web3 Services 购买与配置、以及 Rainbow Activity/POAP
-  控制台发行与领取流程。在用户提及 NFTRainbow、Rainbow API、NFT 铸造、合约代付、元数据、
-  api.nftrainbow.cn、docs.nftrainbow.xyz、Web3 Services、Activity 或 POAP 时使用。
+  控制台发行与领取流程；亦覆盖 NFTRainbow 控制台 KYC/实名认证，以及 Open API 错误码
+  40105（KYC required）。
+  在用户提及 NFTRainbow、Rainbow API、NFT 铸造、合约代付、元数据、api.nftrainbow.cn、
+  docs.nftrainbow.xyz、Web3 Services、Activity、POAP，或在 NFTRainbow / Rainbow 语境下
+  提及 KYC、实名、40105、KYC required 时使用。
 ---
 
 # NFTRainbow
@@ -15,10 +18,10 @@ description: >
 
 1. 先用下方决策树分流。
 2. 文档 → [reference/docs.md](reference/docs.md)；必要时拉 GitBook `.md` 或 `?ask=`。
-3. 写集成 → [reference/api.md](reference/api.md) + [reference/workflows.md](reference/workflows.md) + [examples/](examples/)。
+3. 写集成 → **先**读 [reference/kyc.md](reference/kyc.md)，再读 [reference/auth.md](reference/auth.md)，再看 [reference/api.md](reference/api.md) + [reference/workflows.md](reference/workflows.md) + [examples/](examples/)。
 4. 字段细节 → 对 [openapi/swagger-2.0.json](openapi/swagger-2.0.json) **局部**查找；**禁止默认整读**。
 5. Web3 Services → [reference/web3-services.md](reference/web3-services.md)（仅购买/配置）。
-6. Activity / POAP → [reference/activity.md](reference/activity.md)（控制台流程，非 Open API）。
+6. Activity / POAP **创建/发行（项目方）** → 先看 [reference/kyc.md](reference/kyc.md)，再看 [reference/activity.md](reference/activity.md)。**用户领取** → 直接 [reference/activity.md](reference/activity.md)（领取方无需项目方 KYC）。
 7. 坑与硬性规则 → [reference/pitfalls.md](reference/pitfalls.md)。
 
 ## 决策树
@@ -26,17 +29,19 @@ description: >
 ```
 只说“想铸造 NFT”？       → 先执行下方「铸造入口」
 文档 / 概念 / 链接？     → reference/docs.md
-要写集成代码？           → api.md + workflows.md + examples/
+KYC / 实名 / 审核？      → reference/kyc.md
+鉴权 / 凭证 / login / JWT？ → 先 kyc.md（未声明已通过，或遇 `KYC required`/`40105` 时），再 auth.md
+要写集成代码？           → 先 kyc.md，再 auth.md，再 api.md + workflows.md + examples/
 Web3 Services？          → web3-services.md（禁止展开 RPC/SCAN 调用）
-Activity / POAP？        → activity.md（控制台+领取页；禁止臆造 Activity API）
+Activity 创建/发行（项目方）？ → 先 kyc.md，再 activity.md（禁止臆造 Activity API）
+Activity 用户领取？          → activity.md（领取方无需项目方 KYC）
 Conflux 链基础概念？     → 可建议 conflux-docs；Rainbow 代付步骤仍用本 skill
 ```
 
 ## API 要点
 
 - Base：`https://api.nftrainbow.cn`
-- Login：`POST /v1/login`（`app_id` + `app_secret`）→ `Authorization: Bearer <token>`
-- 环境变量：`NFTRAINBOW_APP_ID` / `NFTRAINBOW_APP_SECRET`（见 [examples/env.md](examples/env.md)）
+- 鉴权前置（强制）：KYC（见 [reference/kyc.md](reference/kyc.md)）→ 创建 App → `app_id`/`app_secret` → `POST /v1/login` → `Authorization: Bearer <token>`（详见 [reference/auth.md](reference/auth.md)）
 - 链：`conflux` / `conflux_test`
 - 任务 `status`：0 pending / 1 success / 2 failed
 - 铸造前确保代付/自动代付就绪
@@ -53,7 +58,7 @@ Conflux 链基础概念？     → 可建议 conflux-docs；Rainbow 代付步骤
 
 ## 禁止
 
-- 臆造文档 URL，或编造 Activity / POAP Open API
+- 臆造文档 URL，或编造 Activity / POAP / KYC 查询 Open API
 - 推荐 Anyweb（用晒啦）
 - 把秘密写入仓库
 - 在 Web3 Services 场景输出 RPC/SCAN 调用教程

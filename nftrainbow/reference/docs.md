@@ -11,6 +11,17 @@
 | sitemap | https://docs.nftrainbow.xyz/sitemap.md |
 | 文档源码仓库 | https://github.com/nft-rainbow/rainbow-doc |
 
+## KYC / 实名
+
+先看本地说明：[kyc.md](kyc.md)（控制台提交、状态判断、`40105`）。
+
+| 主题 | URL |
+|------|-----|
+| 控制台 | https://console.nftrainbow.cn/ |
+| FAQs（实名 / KYC required） | https://docs.nftrainbow.xyz/docs/faqs |
+| Interactive（注册 → KYC → 创建 APP） | https://docs.nftrainbow.xyz/tutorials/interactive |
+| Error codes（40105） | https://docs.nftrainbow.xyz/about-the-apis/error-codes |
+
 ## 铸造工具
 
 | 主题 | URL |
@@ -38,7 +49,10 @@
 | 主题 | URL |
 |------|-----|
 | Web3 Services | https://docs.nftrainbow.xyz/products/web3-services |
-| Open API 相关（Authentication / Error codes 等） | 以 `llms.txt` / `sitemap.md` 为准，勿猜测路径 |
+| Open API Authentication | https://docs.nftrainbow.xyz/about-the-apis/authentication |
+| Open API Login | https://docs.nftrainbow.xyz/api-reference/open-api/login |
+
+其余 Open API 页面可通过 `llms.txt` / `sitemap.md` 定位，勿猜测路径。
 
 ## 社区
 

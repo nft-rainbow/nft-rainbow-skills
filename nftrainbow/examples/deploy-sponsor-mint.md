@@ -1,6 +1,6 @@
 # Deploy → Sponsor → Custom Mint
 
-环境变量同 `env.md`。先获取 `TOKEN`（同 `easy-mint.md`）。
+先完成鉴权前置并取得 `TOKEN`（含环境变量），见 [../reference/auth.md](../reference/auth.md)。
 
 ## 1. Deploy
 
