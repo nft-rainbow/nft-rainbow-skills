@@ -1,6 +1,6 @@
 # 环境变量
 
-先在 [Rainbow 控制台](https://console.nftrainbow.cn) 创建应用并获取 `app_id` / `app_secret`。完整鉴权步骤见 [../reference/auth.md](../reference/auth.md)。
+在 [Rainbow 控制台](https://console.nftrainbow.cn) 创建应用并获取 `app_id` / `app_secret`。完整鉴权步骤见 [../reference/auth.md](../reference/auth.md)。
 
 ```bash
 export NFTRAINBOW_APP_ID="YOUR_APP_ID"
