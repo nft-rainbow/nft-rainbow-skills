@@ -49,6 +49,7 @@ Conflux 链基础概念？     → 可建议 [conflux-docs](https://github.com/c
 
 - 臆造文档 URL，或编造 Activity / POAP / KYC 查询 Open API
 - 禁止使用 Anyweb
+- 整体读取 swagger API JSON 文件
 
 ## 文件索引
 
