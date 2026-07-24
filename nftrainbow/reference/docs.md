@@ -33,7 +33,7 @@
 | 元数据管理 | https://docs.nftrainbow.xyz/tutorials/guides/metadata-manage |
 | 控制台合约代付设置 | https://docs.nftrainbow.xyz/tutorials/guides/kong-zhi-tai-he-yue-dai-fu-she-zhi |
 
-**纠正：** 用户侧钱包请使用**晒啦**。
+**纠正：** 用户侧钱包请使用**晒啦**，Anyweb 已不可用。
 
 ## Rainbow Activity（含 POAP）
 

@@ -48,4 +48,19 @@ Conflux 链基础概念？     → 可建议 [conflux-docs](https://github.com/c
 ## 禁止
 
 - 臆造文档 URL，或编造 Activity / POAP / KYC 查询 Open API
-- 用户侧钱包用晒啦
+- 禁止使用 Anyweb
+
+## 文件索引
+
+| 文件 | 用途 |
+|------|------|
+| [reference/docs.md](reference/docs.md) | 文档 / 概念；必要时再拉 GitBook `.md` 或 `?ask=` |
+| [reference/setup.md](reference/setup.md) | 写集成的第一步；Activity/POAP **创建/发行** 前的 KYC |
+| [reference/auth.md](reference/auth.md) | setup 之后：鉴权 / JWT |
+| [reference/api.md](reference/api.md) | Open API 端点与字段概览 |
+| [reference/workflows.md](reference/workflows.md) | 集成流程 |
+| [examples/](examples/) | 可执行示例 |
+| [reference/web3-services.md](reference/web3-services.md) | Web3 Services（仅购买/配置） |
+| [reference/activity.md](reference/activity.md) | Activity / POAP；**用户领取**可直接读（领取方无需项目方 KYC） |
+| [reference/pitfalls.md](reference/pitfalls.md) | 坑与硬性规则 |
+| [openapi/swagger-2.0.json](openapi/swagger-2.0.json) | 通过局部查找获取字段细节，禁止整体读取（整读规则见 [reference/pitfalls.md](reference/pitfalls.md)） |
