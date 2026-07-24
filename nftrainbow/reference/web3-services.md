@@ -1,6 +1,6 @@
 # Web3 Services：购买与配置
 
-本 skill **只**覆盖购买与配置。不提供 RPC/SCAN 接口调用、参数、或迁移指南。
+本 skill 覆盖购买与配置。用户需要 RPC/SCAN 接口细节时，指向官方 Web3 Services 页中的 Core/eSpace RPC 与 Scan 文档链接。
 
 ## 是什么
 
@@ -23,7 +23,6 @@ NFTRainbow 提供区块链 RPC 与数据索引（Scan 兼容）等基础设施�
 
 文档：同页 FAQ「如何获取服务访问 url 及 key？」
 
-## Agent 禁区
+## Agent 范围
 
-- 不要展开 RPC method、Scan API path、示例 curl 调链上数据。
-- 用户若追问接口细节：指向官方 Web3 Services 页中的 Core/eSpace RPC 与 Scan 文档链接，并说明超出本 skill 范围。
+用户追问 RPC/SCAN 接口细节 → 指向官方文档链接，并说明超出本 skill 范围。

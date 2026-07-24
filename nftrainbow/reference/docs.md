@@ -13,7 +13,7 @@
 
 ## KYC / 实名
 
-先看本地说明：[kyc.md](kyc.md)（控制台提交、状态判断、`40105`）。
+先看本地说明：[setup.md](setup.md)（控制台提交、状态判断与 App 凭证准备）。
 
 | 主题 | URL |
 |------|-----|
@@ -33,7 +33,7 @@
 | 元数据管理 | https://docs.nftrainbow.xyz/tutorials/guides/metadata-manage |
 | 控制台合约代付设置 | https://docs.nftrainbow.xyz/tutorials/guides/kong-zhi-tai-he-yue-dai-fu-she-zhi |
 
-**纠正：** 账户方案文档中的 Anyweb 已不可用；用户侧钱包请使用**晒啦**。
+**纠正：** 用户侧钱包请使用**晒啦**。
 
 ## Rainbow Activity（含 POAP）
 

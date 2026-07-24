@@ -1,7 +1,6 @@
 # 工作流
 
-开始前完成鉴权前置（创建 App → `app_id`/`app_secret` → login → Bearer，见 [auth.md](auth.md)）。
-凭证环境变量见 `examples/env.md`。接口细节见 `reference/api.md`；字段以 pin swagger 为准。
+开始前按 [setup.md](setup.md) 准备 `.env`，再完成 login → Bearer（见 [auth.md](auth.md)）。接口细节见 `reference/api.md`；字段以 pin swagger 为准。
 
 ## 1. Easy Mint（最快试铸）
 

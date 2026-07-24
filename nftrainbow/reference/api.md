@@ -8,13 +8,12 @@
 
 ## 使用规则
 
-1. 日常先查本文件；写请求体/字段时再对 pin swagger **局部** Grep/`operationId` 定位，禁止默认整读。
-2. 鉴权前置（强制）：在 [Rainbow 控制台](https://console.nftrainbow.cn) 创建 App 获取 `app_id`/`app_secret`，并按 [auth.md](auth.md) 完成 login 与 Bearer。
-3. 凭证环境变量示例见 `examples/env.md`。
-4. 链枚举：`conflux` / `conflux_test`。
-5. 异步任务 `status`：`0` pending / `1` success / `2` failed。
-6. 业务响应关注 `data` 字段。
-7. 精简索引以 `/v1/*` App Open API 为主；若含 `/dashboard/*`，见行内标注。
+1. 日常先查本文件；写请求体/字段时再对 pin swagger **局部** Grep/`operationId` 定位（整读规则见 [pitfalls.md](pitfalls.md)）。
+2. 鉴权前置（强制）：按 [setup.md](setup.md) 准备 `.env`，再按 [auth.md](auth.md) 完成 login 与 Bearer。
+3. 链枚举：`conflux` / `conflux_test`。
+4. 异步任务 `status`：`0` pending / `1` success / `2` failed。
+5. 业务响应关注 `data` 字段。
+6. 精简索引以 `/v1/*` App Open API 为主；若含 `/dashboard/*`，见行内标注。
 
 ## Login
 
@@ -115,4 +114,3 @@
 
 - **TBA**（ERC-6551）
 - **Transaction**（通用 send / build approve / transfer 等）
-

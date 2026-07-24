@@ -16,7 +16,7 @@
 创建活动前完成：
 
 1. 注册并登录 [NFTRainbow 控制台](https://console.nftrainbow.cn)
-2. 完成 KYC（实名认证），见 [kyc.md](kyc.md)
+2. 完成 KYC（实名认证），见 [setup.md](setup.md) 第 1 节
 3. 创建项目并部署合约
 4. 为合约设置代付（需先充值）。单个 NFT 存储约 `0.6–0.7 CFX`，按发行量预留（例如 100 个约 `70 CFX`）。详见：https://docs.nftrainbow.xyz/tutorials/guides/kong-zhi-tai-he-yue-dai-fu-she-zhi
 
@@ -39,6 +39,6 @@
 
 ## Agent 应答要点
 
-- 问「怎么发 POAP / Activity」→ 先按 [kyc.md](kyc.md) 完成 KYC 卡控（未声明已通过则先复述 KYC）；再按上文控制台步骤说明，并给出官方文档链接
+- 问「怎么发 POAP / Activity」→ 先按 [setup.md](setup.md) 第 1 节完成 KYC 卡控（未声明已通过则先复述 KYC）；再按上文控制台步骤说明，并给出官方文档链接
 - 问「有没有 Activity API」→ 说明当前文档为控制台流程；勿臆造 endpoint
 - 问「用户怎么领」→ 手机号登录领取页 → 晒啦查看（领取方用户无需项目方 KYC）
