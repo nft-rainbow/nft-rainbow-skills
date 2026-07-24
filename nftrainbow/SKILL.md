@@ -12,7 +12,7 @@ description: >
 
 # NFTRainbow
 
-同时服务：**文档导航**与 **Open API 集成**。中文说明；API 标识符保持英文。
+同时服务：**文档导航**与 **Open API 集成**。API 标识符保持英文。
 
 ## 读文件规则
 
